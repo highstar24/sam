@@ -1,71 +1,15 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>삼성전자 카드뉴스(S)</title>
-
-<!-- 카카오톡 공유 시 이미지 강제 갱신을 위해 URL 끝에 ?v=2 캐시버스터 추가 -->
-<meta property="og:title" content="삼성전자 카드뉴스(S)">
-<meta property="og:description" content="핵심 분석">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/highstar24/logo@main/logo_png.png?v=2">
-<meta property="og:image:width" content="800">
-<meta property="og:image:height" content="400">
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
-@font-face{font-family:'Paperlogy';font-weight:400;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-Regular.woff2')}
-@font-face{font-family:'Paperlogy';font-weight:700;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-Bold.woff2')}
-@font-face{font-family:'Paperlogy';font-weight:900;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-Black.woff2')}
-:root{--orange:#FF9B54;--purple:#8B5FDF;--blue:#4A72C9;--green:#B3E879;--dark:#2E2A50;--neon:#E1FB62;--white:#FFFFFF}
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Paperlogy',sans-serif;word-break:keep-all}
-
-body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);touch-action:none;}
-.carousel-wrapper{position:relative;width:100vw;height:100vh;overflow:hidden}
-.carousel-container{display:flex;width:100%;height:100vh;transition:transform .4s cubic-bezier(.25,1,.5,1)}
-
-.card{flex-shrink:0;width:100vw;height:100vh;position:relative;display:flex;flex-direction:column;padding:0;}
-.header-section{padding:40px 30px 20px;display:flex;flex-direction:column;position:relative;z-index:2;height:180px}
-.content-section{flex:1;border-radius:30px 30px 0 0;padding:35px 25px 90px;overflow-y:auto;display:flex;flex-direction:column;gap:18px;touch-action:pan-y;-webkit-overflow-scrolling:touch}
-
-.card.cover,.card.cta{background:var(--dark);justify-content:center;align-items:center;padding:40px;text-align:center}
-.card-2{background:var(--orange)}.card-2 .content-section{background:var(--purple)}
-.card-3{background:var(--blue)}.card-3 .content-section{background:var(--green)}
-.card-4{background:var(--purple)}.card-4 .content-section{background:var(--orange)}
-.card-5{background:var(--green)}.card-5 .content-section{background:var(--blue)}
-
-/* 레퍼런스와 동일한 로고 클래스 */
-.logo{position:absolute;top:25px;right:15px;width:58px;z-index:10;pointer-events:none}
-
-.tag{display:inline-block;background:rgba(255,255,255,.1);color:var(--neon);padding:8px 18px;border-radius:20px;font-weight:800;font-size:1rem;margin-bottom:20px;border:1px solid rgba(225,251,98,.3)}
-.page-title{color:#fff;font-size:1.8rem;font-weight:800;line-height:1.3;margin-top:5px}
-.card-5 .page-title{color:var(--dark)}.page-title::before{content:"";float:right;width:55px;height:55px}
-.page-num-header{font-size:2.5rem;font-weight:900;color:rgba(255,255,255,.3);position:absolute;left:30px;top:35px;z-index:1}
-.card-5 .page-num-header{color:rgba(0,0,0,.1)}
-.info-card{background:#fff;border-radius:16px;padding:25px 20px;box-shadow:0 4px 15px rgba(0,0,0,.1);width:100%}
-.info-card.dark{background:var(--dark);color:#fff}
-.info-card h3{font-size:1.25rem;font-weight:800;margin-bottom:8px;color:var(--dark);line-height:1.3}
-.info-card.dark h3{color:#fff}.info-card p{font-size:1.05rem;line-height:1.5;color:#444;font-weight:500}
-.info-card.dark p{color:#d0d0d0}.cover-title{font-size:3.2rem;font-weight:900;color:var(--neon);line-height:1.2;margin-bottom:25px}
-.cover-sub{font-size:1.25rem;color:#fff;line-height:1.6;margin-bottom:40px;font-weight:600}
-.cta-btn{display:inline-flex;align-items:center;justify-content:center;background:var(--neon);color:var(--dark);text-decoration:none;padding:16px 28px;border-radius:50px;font-weight:900;font-size:1.15rem;margin-top:30px;min-width:220px;white-space:nowrap;z-index:100}
-.bottom-bar{position:absolute;bottom:0;left:0;width:100%;height:60px;background:rgba(46,42,80,.95);display:flex;justify-content:space-between;align-items:center;padding:0 25px;z-index:10;pointer-events:none}
-.bottom-text{font-size:.9rem;color:var(--neon);font-weight:700}
-.page-indicator{font-weight:800;font-size:1.1rem;color:#fff}
-</style>
-</head>
-<body>
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"><title>삼성전자 카드뉴스(S)</title><meta property="og:title" content="삼성전자 카드뉴스(S)"><meta property="og:description" content="핵심 분석"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/highstar24/logo@main/logo_png.png"><style>@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');@font-face{font-family:'Paperlogy';font-weight:400;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-Regular.woff2') format('woff2');}@font-face{font-family:'Paperlogy';font-weight:700;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-Bold.woff2') format('woff2');}@font-face{font-family:'Paperlogy';font-weight:900;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-Black.woff2') format('woff2');}:root{--orange:#FF9B54;--purple:#8B5FDF;--blue:#4A72C9;--green:#B3E879;--dark:#2E2A50;--neon:#E1FB62;--white:#FFFFFF;}*{box-sizing:border-box;margin:0;padding:0;font-family:'Paperlogy',sans-serif;word-break:keep-all;}body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);touch-action:none;}.carousel-wrapper{position:relative;width:100vw;height:100vh;overflow:hidden;}.carousel-container{display:flex;width:100%;height:100vh;transition:transform 0.4s cubic-bezier(0.25,1,0.5,1);}.card{flex-shrink:0;width:100vw;height:100vh;position:relative;display:flex;flex-direction:column;padding:0;}.header-section{padding:40px 30px 20px;display:flex;flex-direction:column;position:relative;z-index:2;height:180px;}.content-section{flex:1;border-radius:30px 30px 0 0;padding:35px 25px 90px;overflow-y:auto;display:flex;flex-direction:column;gap:18px;touch-action:pan-y;-webkit-overflow-scrolling:touch;}.card.cover,.card.cta{background:var(--dark);justify-content:center;align-items:center;padding:40px;text-align:center;}.card-2{background:var(--orange);}.card-2 .content-section{background:var(--purple);}.card-3{background:var(--blue);}.card-3 .content-section{background:var(--green);}.card-4{background:var(--purple);}.card-4 .content-section{background:var(--orange);}.card-5{background:var(--green);}.card-5 .content-section{background:var(--blue);}.logo{position:absolute;top:25px;right:15px;width:58px;z-index:10;pointer-events:none;}.tag{display:inline-block;background:rgba(255,255,255,0.1);color:var(--neon);padding:8px 18px;border-radius:20px;font-weight:800;font-size:1rem;margin-bottom:20px;border:1px solid rgba(225,251,98,0.3);}.page-title{color:white;font-size:1.8rem;font-weight:800;line-height:1.3;margin-top:5px;}.card-5 .page-title{color:var(--dark);}.page-title::before{content:"";float:right;width:55px;height:55px;}.page-num-header{font-size:2.5rem;font-weight:900;color:rgba(255,255,255,0.3);position:absolute;left:30px;top:35px;z-index:1;}.card-5 .page-num-header{color:rgba(0,0,0,0.1);}.info-card{background:white;border-radius:16px;padding:25px 20px;box-shadow:0 4px 15px rgba(0,0,0,0.1);width:100%;}.info-card.dark{background:var(--dark);color:white;}.info-card h3{font-size:1.25rem;font-weight:800;margin-bottom:8px;color:var(--dark);line-height:1.3;}.info-card.dark h3{color:white;}.info-card p{font-size:1.05rem;line-height:1.5;color:#444;font-weight:500;}.info-card.dark p{color:#d0d0d0;}.info-badge{display:inline-block;font-size:0.9rem;font-weight:800;color:var(--blue);margin-bottom:8px;}.info-card.dark .info-badge{color:var(--neon);}.cover-title{font-size:3.2rem;font-weight:900;color:var(--neon);line-height:1.2;margin-bottom:25px;padding-right:0;}.cover-sub{font-size:1.25rem;color:white;line-height:1.6;margin-bottom:40px;font-weight:600;}.cta-btn{display:inline-flex;align-items:center;justify-content:center;background:var(--neon);color:var(--dark);text-decoration:none;padding:16px 28px;border-radius:50px;font-weight:900;font-size:1.15rem;margin-top:30px;width:auto;min-width:220px;max-width:280px;white-space:nowrap;cursor:pointer;z-index:100;}.bottom-bar{position:absolute;bottom:0;left:0;width:100%;height:60px;background:rgba(46,42,80,0.95);display:flex;justify-content:space-between;align-items:center;padding:0 25px;z-index:10;pointer-events:none;}.bottom-text{font-size:0.9rem;color:var(--neon);font-weight:700;}.page-indicator{font-weight:800;font-size:1.1rem;color:white;}</style></head><body>
 
 <div class="carousel-wrapper">
     <div class="carousel-container" id="slider">
         <!-- 1페이지: 표지 -->
         <div class="card cover">
             <div class="tag">AI 모멘텀 본격화</div>
-            <h1 class="cover-title" style="font-size: 4.2rem; color: var(--neon); margin-bottom: 15px; letter-spacing: -2px; line-height: 1;">삼성전자</h1>
+            <h1 class="cover-title" style="font-size: 2.8rem;">삼성전자</h1>
             <p class="cover-sub">1분기 영업이익 57.2조 달성<br>반도체 슈퍼사이클의 귀환</p>
-            <div class="info-card dark" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);max-width:320px;">
-                <h3 style="color:var(--neon); text-align:center; font-size: 1.1rem; margin-bottom: 5px;">역대급 어닝 서프라이즈!</h3>
-                <p style="text-align:center; font-size: 1.2rem; font-weight: 900; color: white;">HBM 및 선단 D램 수요 폭발</p>
+            <div class="info-card dark" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); max-width: 320px;">
+                <h3 style="color:var(--neon); text-align:center; font-size: 1.1rem; margin-bottom: 5px;">어닝 서프라이즈</h3>
+                <p style="text-align:center; font-size: 1.6rem; font-weight: 900; color: white;">시장 기대치 50% 상회</p>
             </div>
             <div class="bottom-bar" style="background: transparent;">
                 <div class="page-indicator" style="width: 100%; text-align: right;">01 / 06</div>
@@ -76,22 +20,24 @@ body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);
         <div class="card card-2">
             <div class="header-section">
                 <span class="page-num-header">02</span>
-                <div style="padding-left:60px;">
+                <div style="padding-left: 60px;">
                     <h2 class="page-title">컨센서스를 파괴한<br>압도적 실적</h2>
                 </div>
             </div>
             <div class="content-section">
                 <div class="info-card">
+                    <span class="info-badge">수익성 극대화</span>
                     <h3>영업이익 57.2조 원</h3>
-                    <p>전년 동기 대비 755% 증가하며 시장 기대치를 50% 이상 훌쩍 뛰어넘었습니다.</p>
+                    <p>전년 동기 대비 755% 증가하며 시장 기대치를 50% 이상 훌쩍 뛰어넘는 실적을 발표했습니다.</p>
                 </div>
-                <div class="info-card">
-                    <h3>매출 133조 원</h3>
-                    <p>전분기 대비 41.7% 증가하며 외형 성장과 수익성을 모두 잡았습니다.</p>
+                <div class="info-card dark">
+                    <span class="info-badge">외형 성장</span>
+                    <h3>매출 133조 원 달성</h3>
+                    <p>전분기 대비 41.7% 증가하며 외형 성장과 수익성을 동시에 잡아내는 기염을 토했습니다.</p>
                 </div>
             </div>
             <div class="bottom-bar">
-                <div class="bottom-text">어닝 서프라이즈 모멘텀</div>
+                <div class="bottom-text">기존 실적의 한계를 극복하는 패러다임</div>
                 <div class="page-indicator">02 / 06</div>
             </div>
         </div>
@@ -100,18 +46,23 @@ body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);
         <div class="card card-3">
             <div class="header-section">
                 <span class="page-num-header">03</span>
-                <div style="padding-left:60px;">
+                <div style="padding-left: 60px;">
                     <h2 class="page-title">글로벌 탑티어<br>수익력 증명</h2>
                 </div>
             </div>
             <div class="content-section">
                 <div class="info-card">
-                    <h3>아람코, 애플과 어깨를 나란히</h3>
-                    <p>한 분기에 40조 원 이상 버는 글로벌 슈퍼 기업의 반열에 당당히 합류했습니다.</p>
+                    <span class="info-badge">글로벌 경쟁력</span>
+                    <h3>아람코, 애플과 동급</h3>
+                    <p>한 분기에 40조 원 이상 버는 글로벌 슈퍼 기업의 반열에 당당히 합류하며 위상을 증명했습니다.</p>
+                </div>
+                <div class="info-card dark" style="background:var(--dark); padding: 25px 20px;">
+                    <h3 style="color:var(--neon); font-size:1.15rem;">AI 메모리의 중심</h3>
+                    <p style="color:#d0d0d0;">글로벌 빅테크 기업들의 AI 인프라 투자가 확대되며 메모리 반도체 수요가 폭발적으로 증가하고 있습니다.</p>
                 </div>
             </div>
             <div class="bottom-bar">
-                <div class="bottom-text">압도적인 글로벌 경쟁력</div>
+                <div class="bottom-text">글로벌 무대에서 검증된 기술력</div>
                 <div class="page-indicator">03 / 06</div>
             </div>
         </div>
@@ -120,18 +71,23 @@ body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);
         <div class="card card-4">
             <div class="header-section">
                 <span class="page-num-header">04</span>
-                <div style="padding-left:60px;">
-                    <h2 class="page-title">AI 메모리의<br>강력한 수요</h2>
+                <div style="padding-left: 60px;">
+                    <h2 class="page-title">HBM과 선단 D램<br>강력한 수요</h2>
                 </div>
             </div>
             <div class="content-section">
                 <div class="info-card">
-                    <h3>HBM과 선단 D램</h3>
-                    <p>AI 인프라 투자가 확대되며 메모리 반도체 수요가 기업 수익성에 엄청난 폭발력을 가져다주었습니다.</p>
+                    <span class="info-badge">핵심 인프라</span>
+                    <h3>메모리 시장 지배력</h3>
+                    <p>AI 반도체 구동에 필수적인 HBM과 선단 D램의 독보적 수율과 공급 능력을 통해 시장을 리드합니다.</p>
+                </div>
+                <div class="info-card" style="background:#fff3cd; border:none;">
+                    <h3 style="color:#856404; font-size:1.15rem;">투자 모멘텀</h3>
+                    <p style="color:#664d03;">단순한 제품 공급을 넘어, AI 생태계 자체를 주도하는 기술 플랫폼으로서 중장기적 수익 구조를 확립했습니다.</p>
                 </div>
             </div>
             <div class="bottom-bar">
-                <div class="bottom-text">미래 산업의 핵심 인프라</div>
+                <div class="bottom-text">압도적인 기술력 기반의 확실한 모멘텀</div>
                 <div class="page-indicator">04 / 06</div>
             </div>
         </div>
@@ -140,27 +96,39 @@ body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);
         <div class="card card-5">
             <div class="header-section">
                 <span class="page-num-header">05</span>
-                <div style="padding-left:60px;">
-                    <h2 class="page-title">향후 투자<br>체크포인트</h2>
+                <div style="padding-left: 60px;">
+                    <h2 class="page-title">투자 포인트<br>체크리스트</h2>
                 </div>
             </div>
             <div class="content-section">
+                <div class="info-card dark" style="background:var(--dark); text-align:center; padding: 30px 20px;">
+                    <p style="color:#d0d0d0; margin-bottom: 10px;">새로운 슈퍼사이클 시작</p>
+                    <h3 style="font-size: 1.8rem; color:var(--neon);">장기적 관점으로<br>접근해야 할 시간</h3>
+                </div>
                 <div class="info-card">
-                    <h3>장기적 관점 접근</h3>
-                    <p>단기 차익 실현 매물을 유의하며, 확정실적 발표 시 컨퍼런스 콜을 참고하여 장기 트렌드를 검토해 보세요.</p>
+                    <ul style="list-style:none; padding:0; font-size:1.05rem; line-height:1.8;">
+                        <li style="border-bottom:1px solid #eee; padding:10px 0;"><b>① 어닝 서프라이즈:</b> 1분기 57.2조 영업이익</li>
+                        <li style="border-bottom:1px solid #eee; padding:10px 0;"><b>② HBM 수요 폭발:</b> AI 인프라 투자 지속 여부</li>
+                        <li style="border-bottom:1px solid #eee; padding:10px 0;"><b>③ 컨퍼런스 콜:</b> 확정실적 발표 시 가이던스 확인</li>
+                        <li style="padding:10px 0;"><b>④ 수급 모멘텀:</b> 외국인/기관 패시브 자금 유입</li>
+                    </ul>
                 </div>
             </div>
             <div class="bottom-bar">
-                <div class="bottom-text">성공적인 투자를 위한 가이드</div>
+                <div class="bottom-text">장기적인 성장 모멘텀 추적 필수</div>
                 <div class="page-indicator">05 / 06</div>
             </div>
         </div>
 
-        <!-- 6페이지: CTA -->
+        <!-- 6페이지 (CTA) -->
         <div class="card cta">
-            <h2 style="color:white;margin-bottom:25px;font-size:2.2rem;line-height:1.4;font-weight:900;">함께 공부하실 분은<br><span style="color:var(--neon);">하이스타 블로그에서</span></h2>
-            <p style="color:var(--orange);margin-bottom:25px;font-size:1.45rem;line-height:1.6;font-weight:700;">여러분의<br>성공적인 투자를<br>진심으로 응원합니다!</p>
-            <a href="https://blog.naver.com/jin0oo" class="cta-btn" target="_blank">블로그 바로가기 ➔</a>
+            <h2 style="color: white; margin-bottom: 25px; font-size: 2.2rem; line-height: 1.4; font-weight: 900;">
+                함께 공부하실 분은<br><span style="color: var(--neon);">하이스타 블로그</span>에서
+            </h2>
+            <p style="color: var(--orange); margin-bottom: 25px; font-size: 1.45rem; line-height: 1.6; font-weight: 700;">
+                여러분의<br>성공적인 투자를<br>진심으로 응원합니다!
+            </p>
+            <a href="https://blog.naver.com/jin0oo" class="cta-btn" target="_blank">하이스타 블로그 바로가기 ➔</a>
             <div class="bottom-bar" style="background: transparent; flex-direction: column; justify-content: flex-end; padding-bottom: 30px;">
                 <div style="font-size: 0.85rem; color: rgba(255,255,255,0.4); text-align: center; margin-bottom: 15px;">본 콘텐츠는 정보 제공 목적이며<br>특정 종목의 매수/매도를 추천하지 않습니다.</div>
                 <div class="page-indicator" style="color: rgba(255,255,255,0.6);">06 / 06</div>
@@ -169,72 +137,6 @@ body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);
     </div>
 </div>
 
-<!-- 레퍼런스(알지노믹스)와 100% 동일한 자바스크립트 구조 (로고 삽입 및 무한 루프 스와이프) -->
 <script>
-const logoUrl='https://cdn.jsdelivr.net/gh/highstar24/logo@main/logo_png.png';
-const container=document.getElementById('slider');
-let cards=Array.from(container.children);
-
-// 1. 각 페이지(카드) 내부에 로고 직접 삽입 (레퍼런스 동일)
-cards.forEach((c)=>{
-    const img=document.createElement('img');
-    img.src=logoUrl;
-    img.className='logo';
-    c.appendChild(img);
-});
-
-// 2. 무한 스와이프를 위한 클론 생성 (마지막 장 -> 첫 장 자동 넘김)
-const firstClone=cards[0].cloneNode(true);
-const lastClone=cards[cards.length-1].cloneNode(true);
-container.appendChild(firstClone);
-container.insertBefore(lastClone,cards[0]);
-
-const total=cards.length;
-let idx=1;
-let sX=0,sY=0,cX=0,cY=0;
-let isDrag=false,isScroll=false;
-
-container.style.transform=`translateX(-100vw)`;
-
-function updateT(anim=true){
-    if(anim){container.style.transition='transform 0.4s cubic-bezier(0.25,1,0.5,1)';}
-    else{container.style.transition='none';container.offsetHeight;}
-    container.style.transform=`translateX(-${idx*100}vw)`;
-}
-
-container.addEventListener('transitionend',()=>{
-    if(idx===total+1){
-        idx=1;
-        updateT(false);
-    }else if(idx===0){
-        idx=total;
-        updateT(false);
-    }
-});
-
-container.addEventListener('touchstart',(e)=>{
-    if(e.target.closest('a'))return;
-    sX=e.touches[0].clientX;
-    sY=e.touches[0].clientY;
-    isDrag=true;
-    isScroll=false;
-},{passive:true});
-
-container.addEventListener('touchmove',(e)=>{
-    if(!isDrag)return;
-    cX=e.touches[0].clientX;
-    cY=e.touches[0].clientY;
-    if(Math.abs(cY-sY)>Math.abs(cX-sX)&&Math.abs(cY-sY)>10)isScroll=true;
-},{passive:true});
-
-container.addEventListener('touchend',(e)=>{
-    if(e.target.closest('a'))return;
-    if(!isDrag||isScroll){isDrag=false;return;}
-    const diffX=sX-(cX||e.changedTouches[0].clientX);
-    if(diffX>50){idx++;updateT();}
-    else if(diffX<-50){idx--;updateT();}
-    isDrag=false;cX=0;cY=0;isScroll=false;
-});
-</script>
-</body>
-</html>
+const logoUrl='https://cdn.jsdelivr.net/gh/highstar24/logo@main/logo_png.png';const container=document.getElementById('slider');let cards=Array.from(container.children);cards.forEach((c)=>{const img=document.createElement('img');img.src=logoUrl;img.className='logo';c.appendChild(img);});const firstClone=cards[0].cloneNode(true);const lastClone=cards[cards.length-1].cloneNode(true);container.appendChild(firstClone);container.insertBefore(lastClone,cards[0]);const total=cards.length;let idx=1;let sX=0,sY=0,cX=0,cY=0;let isDrag=false,isScroll=false;container.style.transform=`translateX(-100vw)`;function updateT(anim=true){if(anim){container.style.transition='transform 0.4s cubic-bezier(0.25,1,0.5,1)';}else{container.style.transition='none';container.offsetHeight;}container.style.transform=`translateX(-${idx*100}vw)`;}container.addEventListener('transitionend',()=>{if(idx===total+1){idx=1;updateT(false);}else if(idx===0){idx=total;updateT(false);}});container.addEventListener('touchstart',(e)=>{if(e.target.closest('a'))return;sX=e.touches[0].clientX;sY=e.touches[0].clientY;isDrag=true;isScroll=false;},{passive:true});container.addEventListener('touchmove',(e)=>{if(!isDrag)return;cX=e.touches[0].clientX;cY=e.touches[0].clientY;if(Math.abs(cY-sY)>Math.abs(cX-sX)&&Math.abs(cY-sY)>10)isScroll=true;},{passive:true});container.addEventListener('touchend',(e)=>{if(e.target.closest('a'))return;if(!isDrag||isScroll){isDrag=false;return;}const diffX=sX-(cX||e.changedTouches[0].clientX);if(diffX>50){idx++;updateT();}else if(diffX<-50){idx--;updateT();}isDrag=false;cX=0;cY=0;isScroll=false;});
+</script></body></html>
