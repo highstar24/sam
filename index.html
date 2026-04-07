@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>삼성전자 카드뉴스(S)</title>
 
-<!-- 오픈그래프(OG) 태그 보강: 카카오톡 로고 노출 필수 -->
-<meta property="og:type" content="website">
+<!-- 카카오톡 공유 시 이미지 강제 갱신을 위해 URL 끝에 ?v=2 캐시버스터 추가 -->
 <meta property="og:title" content="삼성전자 카드뉴스(S)">
 <meta property="og:description" content="핵심 분석">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/highstar24/logo@main/logo_png.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/highstar24/logo@main/logo_png.png?v=2">
 <meta property="og:image:width" content="800">
 <meta property="og:image:height" content="400">
 
@@ -21,7 +20,6 @@
 :root{--orange:#FF9B54;--purple:#8B5FDF;--blue:#4A72C9;--green:#B3E879;--dark:#2E2A50;--neon:#E1FB62;--white:#FFFFFF}
 *{box-sizing:border-box;margin:0;padding:0;font-family:'Paperlogy',sans-serif;word-break:keep-all}
 
-/* 스와이프 제어를 위해 touch-action:none 유지 (순수 JS 제어용) */
 body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);touch-action:none;}
 .carousel-wrapper{position:relative;width:100vw;height:100vh;overflow:hidden}
 .carousel-container{display:flex;width:100%;height:100vh;transition:transform .4s cubic-bezier(.25,1,.5,1)}
@@ -29,14 +27,15 @@ body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);
 .card{flex-shrink:0;width:100vw;height:100vh;position:relative;display:flex;flex-direction:column;padding:0;}
 .header-section{padding:40px 30px 20px;display:flex;flex-direction:column;position:relative;z-index:2;height:180px}
 .content-section{flex:1;border-radius:30px 30px 0 0;padding:35px 25px 90px;overflow-y:auto;display:flex;flex-direction:column;gap:18px;touch-action:pan-y;-webkit-overflow-scrolling:touch}
+
 .card.cover,.card.cta{background:var(--dark);justify-content:center;align-items:center;padding:40px;text-align:center}
 .card-2{background:var(--orange)}.card-2 .content-section{background:var(--purple)}
 .card-3{background:var(--blue)}.card-3 .content-section{background:var(--green)}
 .card-4{background:var(--purple)}.card-4 .content-section{background:var(--orange)}
 .card-5{background:var(--green)}.card-5 .content-section{background:var(--blue)}
 
-/* 화면 우측 상단 고정 로고 */
-.logo{position:absolute;top:25px;right:15px;width:58px;z-index:99;pointer-events:none}
+/* 레퍼런스와 동일한 로고 클래스 */
+.logo{position:absolute;top:25px;right:15px;width:58px;z-index:10;pointer-events:none}
 
 .tag{display:inline-block;background:rgba(255,255,255,.1);color:var(--neon);padding:8px 18px;border-radius:20px;font-weight:800;font-size:1rem;margin-bottom:20px;border:1px solid rgba(225,251,98,.3)}
 .page-title{color:#fff;font-size:1.8rem;font-weight:800;line-height:1.3;margin-top:5px}
@@ -58,25 +57,22 @@ body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);
 <body>
 
 <div class="carousel-wrapper">
-    <!-- JS 에러 방지용: HTML에 직접 하이스타 로고 삽입 -->
-    <img src="https://cdn.jsdelivr.net/gh/highstar24/logo@main/logo_png.png" class="logo" alt="하이스타 로고">
-
     <div class="carousel-container" id="slider">
-        <!-- Page 1: Cover -->
+        <!-- 1페이지: 표지 -->
         <div class="card cover">
+            <div class="tag">AI 모멘텀 본격화</div>
             <h1 class="cover-title" style="font-size: 4.2rem; color: var(--neon); margin-bottom: 15px; letter-spacing: -2px; line-height: 1;">삼성전자</h1>
-            <h2 style="font-size: 2.2rem; font-weight: 900; color: #fff; margin-bottom: 25px; line-height: 1.3;">역대급 어닝<br>서프라이즈!</h2>
             <p class="cover-sub">1분기 영업이익 57.2조 달성<br>반도체 슈퍼사이클의 귀환</p>
             <div class="info-card dark" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);max-width:320px;">
-                <h3 style="color:var(--neon);">AI 모멘텀 본격화</h3>
-                <p>HBM 및 선단 D램 수요 폭발</p>
+                <h3 style="color:var(--neon); text-align:center; font-size: 1.1rem; margin-bottom: 5px;">역대급 어닝 서프라이즈!</h3>
+                <p style="text-align:center; font-size: 1.2rem; font-weight: 900; color: white;">HBM 및 선단 D램 수요 폭발</p>
             </div>
             <div class="bottom-bar" style="background: transparent;">
                 <div class="page-indicator" style="width: 100%; text-align: right;">01 / 06</div>
             </div>
         </div>
 
-        <!-- Page 2 -->
+        <!-- 2페이지 -->
         <div class="card card-2">
             <div class="header-section">
                 <span class="page-num-header">02</span>
@@ -100,7 +96,7 @@ body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);
             </div>
         </div>
 
-        <!-- Page 3 -->
+        <!-- 3페이지 -->
         <div class="card card-3">
             <div class="header-section">
                 <span class="page-num-header">03</span>
@@ -120,7 +116,7 @@ body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);
             </div>
         </div>
 
-        <!-- Page 4 -->
+        <!-- 4페이지 -->
         <div class="card card-4">
             <div class="header-section">
                 <span class="page-num-header">04</span>
@@ -140,7 +136,7 @@ body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);
             </div>
         </div>
 
-        <!-- Page 5 -->
+        <!-- 5페이지 -->
         <div class="card card-5">
             <div class="header-section">
                 <span class="page-num-header">05</span>
@@ -160,11 +156,11 @@ body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);
             </div>
         </div>
 
-        <!-- Page 6: CTA -->
+        <!-- 6페이지: CTA -->
         <div class="card cta">
             <h2 style="color:white;margin-bottom:25px;font-size:2.2rem;line-height:1.4;font-weight:900;">함께 공부하실 분은<br><span style="color:var(--neon);">하이스타 블로그에서</span></h2>
             <p style="color:var(--orange);margin-bottom:25px;font-size:1.45rem;line-height:1.6;font-weight:700;">여러분의<br>성공적인 투자를<br>진심으로 응원합니다!</p>
-            <a href="https://blog.naver.com/jin0oo" class="cta-btn">블로그 바로가기</a>
+            <a href="https://blog.naver.com/jin0oo" class="cta-btn" target="_blank">블로그 바로가기 ➔</a>
             <div class="bottom-bar" style="background: transparent; flex-direction: column; justify-content: flex-end; padding-bottom: 30px;">
                 <div style="font-size: 0.85rem; color: rgba(255,255,255,0.4); text-align: center; margin-bottom: 15px;">본 콘텐츠는 정보 제공 목적이며<br>특정 종목의 매수/매도를 추천하지 않습니다.</div>
                 <div class="page-indicator" style="color: rgba(255,255,255,0.6);">06 / 06</div>
@@ -173,51 +169,71 @@ body,html{width:100vw;height:100vh;overflow:hidden;background-color:var(--dark);
     </div>
 </div>
 
+<!-- 레퍼런스(알지노믹스)와 100% 동일한 자바스크립트 구조 (로고 삽입 및 무한 루프 스와이프) -->
 <script>
-// 1장씩만 넘어가도록 완전히 제어된 자바스크립트 스와이프 로직 적용
-const container = document.getElementById('slider');
-const cards = Array.from(container.children);
-const total = cards.length;
-let idx = 0; 
-let sX = 0, sY = 0, cX = 0, cY = 0;
-let isDrag = false, isScroll = false;
+const logoUrl='https://cdn.jsdelivr.net/gh/highstar24/logo@main/logo_png.png';
+const container=document.getElementById('slider');
+let cards=Array.from(container.children);
 
-function updateT() {
-    container.style.transform = `translateX(-${idx * 100}vw)`;
+// 1. 각 페이지(카드) 내부에 로고 직접 삽입 (레퍼런스 동일)
+cards.forEach((c)=>{
+    const img=document.createElement('img');
+    img.src=logoUrl;
+    img.className='logo';
+    c.appendChild(img);
+});
+
+// 2. 무한 스와이프를 위한 클론 생성 (마지막 장 -> 첫 장 자동 넘김)
+const firstClone=cards[0].cloneNode(true);
+const lastClone=cards[cards.length-1].cloneNode(true);
+container.appendChild(firstClone);
+container.insertBefore(lastClone,cards[0]);
+
+const total=cards.length;
+let idx=1;
+let sX=0,sY=0,cX=0,cY=0;
+let isDrag=false,isScroll=false;
+
+container.style.transform=`translateX(-100vw)`;
+
+function updateT(anim=true){
+    if(anim){container.style.transition='transform 0.4s cubic-bezier(0.25,1,0.5,1)';}
+    else{container.style.transition='none';container.offsetHeight;}
+    container.style.transform=`translateX(-${idx*100}vw)`;
 }
 
-container.addEventListener('touchstart', (e) => {
-    if (e.target.closest('a')) return;
-    sX = e.touches[0].clientX;
-    sY = e.touches[0].clientY;
-    isDrag = true;
-    isScroll = false;
-}, { passive: true });
-
-container.addEventListener('touchmove', (e) => {
-    if (!isDrag) return;
-    cX = e.touches[0].clientX;
-    cY = e.touches[0].clientY;
-    // 세로로 스크롤하는 경우 가로 스와이프 취소
-    if (Math.abs(cY - sY) > Math.abs(cX - sX) && Math.abs(cY - sY) > 10) isScroll = true;
-}, { passive: true });
-
-container.addEventListener('touchend', (e) => {
-    if (e.target.closest('a') || !isDrag || isScroll) {
-        isDrag = false;
-        return;
+container.addEventListener('transitionend',()=>{
+    if(idx===total+1){
+        idx=1;
+        updateT(false);
+    }else if(idx===0){
+        idx=total;
+        updateT(false);
     }
-    const diffX = sX - (cX || e.changedTouches[0].clientX);
+});
 
-    // 민감도 조절: 50px 이상 움직여야만 다음/이전 장으로 딱 1번만 넘어감
-    if (diffX > 50 && idx < total - 1) {
-        idx++; // 다음 장으로
-    } else if (diffX < -50 && idx > 0) {
-        idx--; // 이전 장으로
-    }
+container.addEventListener('touchstart',(e)=>{
+    if(e.target.closest('a'))return;
+    sX=e.touches[0].clientX;
+    sY=e.touches[0].clientY;
+    isDrag=true;
+    isScroll=false;
+},{passive:true});
 
-    updateT(); // 화면 이동 반영
-    isDrag = false; cX = 0; cY = 0; isScroll = false;
+container.addEventListener('touchmove',(e)=>{
+    if(!isDrag)return;
+    cX=e.touches[0].clientX;
+    cY=e.touches[0].clientY;
+    if(Math.abs(cY-sY)>Math.abs(cX-sX)&&Math.abs(cY-sY)>10)isScroll=true;
+},{passive:true});
+
+container.addEventListener('touchend',(e)=>{
+    if(e.target.closest('a'))return;
+    if(!isDrag||isScroll){isDrag=false;return;}
+    const diffX=sX-(cX||e.changedTouches[0].clientX);
+    if(diffX>50){idx++;updateT();}
+    else if(diffX<-50){idx--;updateT();}
+    isDrag=false;cX=0;cY=0;isScroll=false;
 });
 </script>
 </body>
